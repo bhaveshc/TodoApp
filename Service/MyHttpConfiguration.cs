@@ -13,17 +13,18 @@ namespace Service
     {
         public MyHttpConfiguration()
         {
+            this.MapHttpAttributeRoutes();
             ConfigureRoutes();
             ConfigureJsonSerialization();
         }
 
         private void ConfigureRoutes()
         {
-            Routes.MapHttpRoute(
-                name: "DefaultApi",
-                routeTemplate: "api/{controller}/{id}",
-                defaults: new { id = RouteParameter.Optional }
-            );
+            //Routes.MapHttpRoute(
+            //    name: "DefaultApi",
+            //    routeTemplate: "api/{controller}/{id}",
+            //    defaults: new { id = RouteParameter.Optional }
+            //);
         }
 
         private void ConfigureJsonSerialization()

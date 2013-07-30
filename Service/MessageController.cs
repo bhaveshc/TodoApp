@@ -12,8 +12,10 @@ namespace Service
         public string Text { get; set; }
     }
 
+    //[RoutePrefix("api/message")]
     public class MessageController : ApiController
-    {
+    {  
+        [HttpGet("api/message")]
         public Greeting Get()
         {
             return new Greeting
